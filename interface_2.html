@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Fig. 3 </title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="vis" style="margin: auto; height: 100%"></div>
+
+  <script type="text/javascript">
+    /* feed the specification file data to var vlSpec */
+      $.getJSON("http://royjy.me/Org-WorkProfiles-demo/static/composed-performance.vl.json", function(vlspec){
+      console.log(vlspec);
+      vegaEmbed("#vis", vlspec)
+    });
+  </script>
+
+</html>
